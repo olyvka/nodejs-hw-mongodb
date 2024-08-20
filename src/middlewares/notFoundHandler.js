@@ -1,3 +1,5 @@
+//src\middlewares\notFoundHandler.js
+
 export const notFoundHandler = (err, req, res, next) => {
     res.status(404).json({
       status: 404,

@@ -1,3 +1,5 @@
+//src\controllers\contacts.js
+
 import {
     getAllContacts,
     getContactById,
@@ -39,10 +41,11 @@ import {
     res.status(201).json({
       status: 201,
       message: 'Successfully created a contact!',
-      data: { ...contact.toObject(), __v: undefined },
+      data: { ...contact.toObject()},
     });
   };
   
+
   export const patchContactController = async (req, res, next) => {
     const { id } = req.params;
     const result = await updateContact(id, req.body);

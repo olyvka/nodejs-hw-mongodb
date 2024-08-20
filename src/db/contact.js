@@ -1,3 +1,5 @@
+// src/db/contact.js
+
 import { model, Schema } from 'mongoose';
 
 const ContactSchema = new Schema(
@@ -26,12 +28,7 @@ const ContactSchema = new Schema(
     },
   },
   {
-    createdAt: {
-      timestamps: true,
-    },
-    updatedAt: {
-      timestamps: true,
-    },
+    timestamps: true,  // Додає поля `createdAt` і `updatedAt` автоматично
   },
 );
 
